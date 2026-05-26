@@ -1,0 +1,46 @@
+# Simple Calculator Project
+
+# Function
+def calculator():
+
+    # Loop
+    while True:
+
+        # User input
+        num1 = float(input("Enter first number: "))
+        operator = input("Enter operator (+, -, *, /): ")
+        num2 = float(input("Enter second number: "))
+
+        # Control Flow (if, elif, else)
+        if operator == "+":
+            result = num1 + num2
+
+        elif operator == "-":
+            result = num1 - num2
+
+        elif operator == "*":
+            result = num1 * num2
+
+        elif operator == "/":
+
+            # Nested control flow
+            if num2 != 0:
+                result = num1 / num2
+            else:
+                result = "Cannot divide by zero"
+
+        else:
+            result = "Invalid operator"
+
+        print("Result:", result)
+
+        # Loop control
+        again = input("Do you want to calculate again? (yes/no): ")
+
+        if again.lower() != "yes":
+            print("Calculator Closed")
+            break
+
+
+# Function call
+calculator()
